@@ -42,9 +42,11 @@ const runBoard = () => {
     }
 
 
-    const winningPattern = [null];
+    const winningPatternUser = [null];
+    const winningPatternCom = [null];
     for (let i = 1; i < GRID; i++) {
-        winningPattern.push(USER_LETTER);
+        winningPatternUser.push(USER_LETTER);
+        winningPatternCom.push(COMPUTER_LETTER);
     }
 
     // VARIABLES
@@ -77,7 +79,7 @@ const runBoard = () => {
         for (let winningCombo of winningCombos) {
             // if there are two o's and a null in a row, return the null index
             let nullSpaceIndex = undefined;
-            let winningP = [...winningPattern];
+            let winningP = letter === COMPUTER_LETTER ? [...winningPatternCom] : [...winningPatternUser];
             for (let index of winningCombo) {
                 const spaceValue = boardState[index];
                 // if winningPattern contains the value, remove it
