@@ -226,7 +226,7 @@ const runBoard = () => {
     gridSizeInput.setAttribute('id', 'grid-size-input');
     gridSizeInput.setAttribute('type', 'number');
     gridSizeInput.setAttribute('min', '2');
-    gridSizeInput.setAttribute('max', '4');
+    gridSizeInput.setAttribute('max', '5');
     gridSizeInput.setAttribute('value', GRID);
     gridSizeInput.addEventListener('change', (e) => {
         const val = e.target.value;
