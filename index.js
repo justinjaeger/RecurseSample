@@ -23,7 +23,6 @@ const runBoard = () => {
                 wc.push(i+(GRID*j));
             }
             winningCombos.push(wc);
-            // winningCombos.push([i, i+GRID, i+(GRID*2)]);
         }
         // create winning diags
         if (i === 0) {
@@ -39,17 +38,14 @@ const runBoard = () => {
                 wc.push(i+((GRID*j)-j));
             }
             winningCombos.push(wc);
-            // winningCombos.push([i, i+GRID-1, i+(GRID*2)-2]);
         }
     }
 
-    console.log('winningCombos',winningCombos)
 
     const winningPattern = [null];
     for (let i = 1; i < GRID; i++) {
         winningPattern.push(USER_LETTER);
     }
-    console.log('winningPattern',winningPattern)
 
     // VARIABLES
 
